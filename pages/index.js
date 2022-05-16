@@ -21,6 +21,9 @@ export default function Home() {
             </div>
           );
         })}
+        <div className={styles.search}>Search</div>
+        <div className={styles.setting_size}>x2</div>
+        <div className={styles.setting_weight}>1.5</div>
       </main>
     </div>
   );
