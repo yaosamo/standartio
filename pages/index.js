@@ -1,6 +1,4 @@
-import { setRequestMeta } from "next/dist/server/request-meta";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Icons from "../components/icons.json";
 
@@ -16,7 +14,7 @@ export default function Home() {
       <main className={styles.main}>
         {Icons.map(function (Icon) {
           return (
-            <div className={styles.iconshape}>
+            <div className={styles.iconshape} key={Icon}>
               <div className={styles.icon}>{Icon.name}</div>
             </div>
           );
