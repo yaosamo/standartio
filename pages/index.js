@@ -14,12 +14,32 @@ export default function Home() {
       <main className={styles.main}>
         {Icons.map(function (Icon) {
           return (
-            <div className={styles.iconshape} key={Icon}>
+            <div className={styles.iconshape} key={Icon.name}>
               <div className={styles.icon}>{Icon.name}</div>
             </div>
           );
         })}
-        <div className={styles.search}>Search</div>
+        <div className={styles.search}>
+          <input
+            className={styles.search_input}
+            jsaction="paste:puy29d;"
+            maxLength="2048"
+            name="q"
+            type="text"
+            aria-autocomplete="both"
+            aria-haspopup="false"
+            autoCapitalize="off"
+            autoComplete="off"
+            autoCorrect="off"
+            autoFocus=""
+            role="combobox"
+            spellCheck="false"
+            title="Search"
+            placeholder="Search"
+            aria-label="Search"
+            data-ved=""
+          />
+        </div>
         <div className={styles.setting_size}>x2</div>
         <div className={styles.setting_weight}>1.5</div>
       </main>
