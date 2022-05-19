@@ -15,3 +15,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  transition: all 0.3s ease;
+}

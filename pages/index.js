@@ -40,7 +40,13 @@ export default function Home() {
             data-ved=""
           />
         </div>
-        <div className={styles.setting_size}>x2</div>
+        {/* Size toggle */}
+        <label className={styles.setting_size}>
+          x2
+          <input type="checkbox" />
+          <span className={styles.setting_size_toggle} />
+        </label>
+        {/* Stroke width */}
         <div className={styles.setting_weight}>1.5</div>
       </main>
     </div>
