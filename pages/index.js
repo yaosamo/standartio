@@ -42,9 +42,8 @@ export default function Home() {
         </div>
         {/* Size toggle */}
         <label className={styles.setting_size}>
-          x2
           <input type="checkbox" />
-          <span className={styles.setting_size_toggle} />
+          <span className={styles.indicator}>x2</span>
         </label>
         {/* Stroke width */}
         <div className={styles.setting_weight}>1.5</div>
