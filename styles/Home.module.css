@@ -82,13 +82,19 @@
 
 /* create :after style it as circle and put below x2 */
 .indicator {
-  width: 2em;
-  height: 2em;
+  width: 3em;
+  height: 3em;
   opacity: 1;
   justify-content: center;
   align-content: center;
   display: grid;
   border-radius: 100%;
+}
+
+.label {
+  padding-top: 0.5rem;
+  color: #646464;
+  font-size: 0.75rem;
 }
 
 .setting_size:hover .indicator {

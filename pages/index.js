@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Icons from "../components/icons.json";
 
@@ -15,7 +16,8 @@ export default function Home() {
         {Icons.map(function (Icon) {
           return (
             <div className={styles.iconshape} key={Icon.name}>
-              <div className={styles.icon}>{Icon.name}</div>
+              <Image src={Icon.url} alt={Icon.name} width={24} height={24} />
+              <a className={styles.label}>{Icon.name}</a>
             </div>
           );
         })}
