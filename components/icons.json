@@ -1,54 +1,62 @@
 [
   {
     "url": "/icons/arrow-right.svg",
-    "name": "Icon 1"
+    "name": "Icon 1",
+    "group": "",
+    "tags": ""
   },
   {
     "url": "/icons/arrow-right.svg",
-    "name": "Icon 2"
+    "name": "Icon 1",
+    "group": "",
+    "tags": ""
   },
   {
     "url": "/icons/arrow-right.svg",
-    "name": "Icon 3"
+    "name": "Icon 1",
+    "group": "",
+    "tags": ""
   },
   {
     "url": "/icons/arrow-right.svg",
-    "name": "Icon 4"
+    "name": "Icon 1",
+    "group": "",
+    "tags": ""
   },
   {
     "url": "/icons/arrow-right.svg",
-    "name": "Icon 5"
+    "name": "Icon 1",
+    "group": "",
+    "tags": ""
   },
   {
     "url": "/icons/arrow-right.svg",
-    "name": "Icon 6"
+    "name": "Icon 1",
+    "group": "",
+    "tags": ""
   },
   {
     "url": "/icons/arrow-right.svg",
-    "name": "Icon 7"
+    "name": "Icon 1",
+    "group": "",
+    "tags": ""
   },
   {
     "url": "/icons/arrow-right.svg",
-    "name": "Icon 8"
+    "name": "Icon 1",
+    "group": "",
+    "tags": ""
   },
   {
     "url": "/icons/arrow-right.svg",
-    "name": "Icon 9"
+    "name": "Icon 1",
+    "group": "",
+    "tags": ""
   },
   {
     "url": "/icons/arrow-right.svg",
-    "name": "Icon 10"
-  },
-  {
-    "url": "/icons/arrow-right.svg",
-    "name": "Icon 11"
-  },
-  {
-    "url": "/icons/arrow-right.svg",
-    "name": "Icon 12"
-  },
-  {
-    "url": "/icons/arrow-right.svg",
-    "name": "Icon 13"
+    "name": "Icon 1",
+    "group": "",
+    "tags": ""
   }
 ]
