@@ -42,8 +42,6 @@
 }
 
 .setting_size:hover,
-.setting_weight:hover,
-.setting_size:hover,
 .search_input:hover,
 .iconshape:hover {
   background-color: #fafafa;
@@ -55,8 +53,7 @@
   box-sizing: border-box;
 }
 
-.setting_size,
-.setting_weight {
+.setting_size {
   justify-content: center;
   align-content: center;
   background: #fff;
@@ -67,7 +64,7 @@
 
 .setting_size {
   display: grid;
-  grid-column-start: 7;
+  grid-column-start: 8;
   grid-column-end: 8;
   grid-row-start: 1;
   grid-row-end: 1;
@@ -105,14 +102,6 @@
 .setting_size input:checked ~ .indicator {
   background-color: #e1e1e1;
   opacity: 1;
-}
-
-.setting_weight {
-  display: grid;
-  grid-column-start: 8;
-  grid-column-end: 8;
-  grid-row-start: 1;
-  grid-row-end: 1;
 }
 
 @media (max-width: 600px) {

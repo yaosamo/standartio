@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Icons from "../components/icons.json";
 
+const size = 24;
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -16,7 +18,12 @@ export default function Home() {
         {Icons.map(function (Icon) {
           return (
             <div className={styles.iconshape} key={Icon.name}>
-              <Image src={Icon.url} alt={Icon.name} width={24} height={24} />
+              <Image
+                src={Icon.url}
+                alt={Icon.name}
+                width={size}
+                height={size}
+              />
               <a className={styles.label}>{Icon.name}</a>
             </div>
           );
@@ -47,8 +54,6 @@ export default function Home() {
           <input type="checkbox" />
           <span className={styles.indicator}>x2</span>
         </label>
-        {/* Stroke width */}
-        <div className={styles.setting_weight}>1.5</div>
       </main>
     </div>
   );
