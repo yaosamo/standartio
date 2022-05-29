@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import Icons from "../components/icons.json";
 
 const size = 24;
+const IconsSorted = Icons.sort((a, b) => a.name > b.name);
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {Icons.map(function (Icon) {
+        {IconsSorted.map(function (Icon) {
           return (
             <div className={styles.iconshape} key={Icon.name}>
               <Image
