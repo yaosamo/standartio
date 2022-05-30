@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Icons from "../components/icons.json";
+import Icons from "../components/iconsmapping";
 
-const size = 24;
-const IconsSorted = Icons.sort((a, b) => a.name > b.name);
+const ratio = 1;
 
 export default function Home() {
   return (
@@ -16,19 +14,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {IconsSorted.map(function (Icon) {
-          return (
-            <div className={styles.iconshape} key={Icon.name}>
-              <Image
-                src={Icon.url}
-                alt={Icon.name}
-                width={size}
-                height={size}
-              />
-              <a className={styles.label}>{Icon.name}</a>
-            </div>
-          );
-        })}
+        {/* icons */}
+        <Icons ratio={ratio} />
         <div className={styles.search}>
           <input
             className={styles.search_input}
