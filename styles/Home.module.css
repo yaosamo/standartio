@@ -1,111 +1,107 @@
 .container {
-  padding: 0 2rem;
+  margin: 0.25rem;
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 2px;
+  row-gap: 2px;
+  border-radius: 0.25rem;
+}
+
+.iconshape {
+  display: grid;
+  min-height: 12.5vw;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  background: #fff;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.search {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  background: #f5f5f5;
+  border-radius: 0.25rem;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
+.search_input {
+  background-color: transparent;
   font-size: 1.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+  width: 100%;
+  height: 100%;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.setting_size:hover,
+.search_input:hover,
+.iconshape:hover {
+  background-color: #fafafa;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
+.search_input:focus {
+  outline: none;
+  border: 2px solid #d7d7d7;
+  box-sizing: border-box;
+}
+
+.setting_size {
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
+  align-content: center;
+  background: #fff;
+  border-radius: 0.25rem;
   font-size: 1.5rem;
+  border: 2px solid transparent;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.setting_size {
+  display: grid;
+  grid-column-start: 8;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  cursor: pointer;
+  min-height: 12.5vw;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.setting_size input {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* create :after style it as circle and put below x2 */
+.indicator {
+  width: 3em;
+  height: 3em;
+  opacity: 1;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  border-radius: 100%;
+}
+
+.label {
+  padding-top: 0.5rem;
+  color: #646464;
+  font-size: 0.75rem;
+}
+
+.setting_size:hover .indicator {
+  background-color: #f1f1f1;
+  opacity: 1;
+}
+
+.setting_size input:checked ~ .indicator {
+  background-color: #e1e1e1;
+  opacity: 1;
 }
 
 @media (max-width: 600px) {
