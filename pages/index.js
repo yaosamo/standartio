@@ -1,8 +1,19 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Icons from "../components/iconsmapping";
+// import * as React from "react";
 
-const ratio = 1;
+var ratio = 1;
+
+const handleChange = () => {
+  if (ratio > 1) {
+    ratio = 1;
+    console.log("ratio 1");
+  } else {
+    ratio = 2;
+    console.log("ratio 2");
+  }
+};
 
 export default function Home() {
   return (
@@ -34,12 +45,11 @@ export default function Home() {
             title="Search"
             placeholder="Search"
             aria-label="Search"
-            data-ved=""
           />
         </div>
         {/* Size toggle */}
         <label className={styles.setting_size}>
-          <input type="checkbox" />
+          <input type="checkbox" onChange={handleChange} />
           <span className={styles.indicator}>x2</span>
         </label>
       </main>
