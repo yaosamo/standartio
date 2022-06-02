@@ -4,20 +4,14 @@ import Icons from "../components/iconsmapping";
 // import * as React from "react";
 import React, { useState } from "react";
 
-// function Example() {
-//   // Declare a new state variable, which we'll call "count"
-//   const [count, setCount] = useState(0);
-
-//   return (
-//     <div>
-//       <p>You clicked {count} times</p>
-//       <button onClick={() => setCount(count + 1)} />
-//     </div>
-//   );
-// }
-
 export default function Home() {
-  var [ratio, setCount] = useState(1);
+  const [ratio, setRatio] = useState(1);
+  const [checked, setChecked] = useState(false);
+  const handleChange = () => {
+    setChecked(!checked);
+    checked ? setRatio(1) : setRatio(2);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -51,12 +45,7 @@ export default function Home() {
         </div>
         {/* Size toggle */}
         <label className={styles.setting_size}>
-          <input
-            type="checkbox"
-            onClick={() => {
-              setCount(ratio + 1);
-            }}
-          />
+          <input type="checkbox" onChange={handleChange} />
           <span className={styles.indicator}>x2</span>
         </label>
       </main>
