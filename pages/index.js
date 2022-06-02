@@ -5,11 +5,9 @@ import Icons from "../components/iconsmapping";
 import React, { useState } from "react";
 
 export default function Home() {
-  const [ratio, setRatio] = useState(1);
   const [checked, setChecked] = useState(false);
   const handleChange = () => {
     setChecked(!checked);
-    checked ? setRatio(1) : setRatio(2);
   };
 
   return (
@@ -22,7 +20,7 @@ export default function Home() {
 
       <main className={styles.main}>
         {/* icons */}
-        <Icons ratio={ratio} />
+        <Icons ratio={checked ? 2 : 1} />
         <div className={styles.search}>
           <input
             className={styles.search_input}
