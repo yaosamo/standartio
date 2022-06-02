@@ -1,10 +1,17 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Icons from "../components/iconsmapping";
-
-const ratio = 1;
+// import * as React from "react";
+import React, { useState } from "react";
 
 export default function Home() {
+  const [ratio, setRatio] = useState(1);
+  const [checked, setChecked] = useState(false);
+  const handleChange = () => {
+    setChecked(!checked);
+    checked ? setRatio(1) : setRatio(2);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -34,12 +41,11 @@ export default function Home() {
             title="Search"
             placeholder="Search"
             aria-label="Search"
-            data-ved=""
           />
         </div>
         {/* Size toggle */}
         <label className={styles.setting_size}>
-          <input type="checkbox" />
+          <input type="checkbox" onChange={handleChange} />
           <span className={styles.indicator}>x2</span>
         </label>
       </main>

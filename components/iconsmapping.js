@@ -8,7 +8,6 @@ export default function Icons(props) {
   const IconsSorted = []
     .concat(IconsData)
     .sort((a, b) => (a.name > b.name ? 1 : -1));
-  // IconsData.sort((a, b) => a.name > b.name);
 
   return IconsSorted.map((Icon, i) => (
     <div className={styles.iconshape} key={i}>

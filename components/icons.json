@@ -1,27 +1,27 @@
 [
   {
     "url": "/icons/arrow-right.svg",
-    "name": "B Arrow Right",
+    "name": "Arrow Right",
     "tags": ""
   },
   {
     "url": "/icons/arrow-up.svg",
-    "name": "A Arrow Up",
+    "name": "Arrow Up",
     "tags": ""
   },
   {
     "url": "/icons/arrow-left.svg",
-    "name": "Z Arrow Left",
+    "name": "Arrow Left",
     "tags": ""
   },
   {
     "url": "/icons/arrow-down.svg",
-    "name": "0 Arrow Down",
+    "name": "Arrow Down",
     "tags": ""
   },
   {
     "url": "/icons/2-chevron-right.svg",
-    "name": "2 Chevron Right",
+    "name": "Chevron Right",
     "tags": ""
   }
 ]

@@ -92,6 +92,7 @@
   padding-top: 0.5rem;
   color: #646464;
   font-size: 0.75rem;
+  letter-spacing: 0.015em;
 }
 
 .setting_size:hover .indicator {
