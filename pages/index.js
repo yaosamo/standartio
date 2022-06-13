@@ -12,8 +12,10 @@ export default function Home() {
   };
 
   const [searchField, setSearchField] = useState("");
-
-  const filteredIcons = IconsData.filter((icon) => {
+  const IconsSorted = []
+    .concat(IconsData)
+    .sort((a, b) => (a.name > b.name ? 1 : -1));
+  const filteredIcons = IconsSorted.filter((icon) => {
     return icon.tags.toLowerCase().includes(searchField.toLowerCase());
   });
 

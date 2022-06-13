@@ -23,7 +23,7 @@
 .search {
   display: grid;
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 8;
   grid-row-start: 1;
   grid-row-end: 1;
   background: #f5f5f5;
@@ -93,6 +93,7 @@
   color: #646464;
   font-size: 0.75rem;
   letter-spacing: 0.015em;
+  text-align: center;
 }
 
 .setting_size:hover .indicator {
