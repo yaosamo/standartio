@@ -1,15 +1,24 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Icons from "../components/iconsmapping";
-// import * as React from "react";
+import IconsList from "../components/iconslist";
+import IconsData from "../components/icons.json";
 import React, { useState } from "react";
 
 export default function Home() {
-  const [ratio, setRatio] = useState(1);
   const [checked, setChecked] = useState(false);
-  const handleChange = () => {
+
+  const handleSizeChange = () => {
     setChecked(!checked);
-    checked ? setRatio(1) : setRatio(2);
+  };
+
+  const [searchField, setSearchField] = useState("");
+
+  const filteredIcons = IconsData.filter((icon) => {
+    return icon.tags.toLowerCase().includes(searchField.toLowerCase());
+  });
+
+  const handleSearchChange = (e) => {
+    setSearchField(e.target.value);
   };
 
   return (
@@ -21,8 +30,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {/* icons */}
-        <Icons ratio={ratio} />
+        {/* Icons List */}
+        <IconsList filteredIcons={filteredIcons} ratio={checked ? 2 : 1} />
+        {/* Search Field */}
         <div className={styles.search}>
           <input
             className={styles.search_input}
@@ -41,11 +51,11 @@ export default function Home() {
             title="Search"
             placeholder="Search"
             aria-label="Search"
+            onChange={handleSearchChange}
           />
         </div>
-        {/* Size toggle */}
         <label className={styles.setting_size}>
-          <input type="checkbox" onChange={handleChange} />
+          <input type="checkbox" onChange={handleSizeChange} />
           <span className={styles.indicator}>x2</span>
         </label>
       </main>
