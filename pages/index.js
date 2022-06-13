@@ -1,6 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Icons from "../components/iconsmapping";
+import Icons from "../components/iconslist";
+import Search from "../components/search";
+import IconsData from "../components/icons.json";
 // import * as React from "react";
 import React, { useState } from "react";
 
@@ -18,35 +20,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        {/* icons */}
-        <Icons ratio={checked ? 2 : 1} />
-        <div className={styles.search}>
-          <input
-            className={styles.search_input}
-            jsaction="paste:puy29d;"
-            maxLength="2048"
-            name="q"
-            type="text"
-            aria-autocomplete="both"
-            aria-haspopup="false"
-            autoCapitalize="off"
-            autoComplete="off"
-            autoCorrect="off"
-            autoFocus=""
-            role="combobox"
-            spellCheck="false"
-            title="Search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-        </div>
-        {/* Size toggle */}
-        <label className={styles.setting_size}>
-          <input type="checkbox" onChange={handleChange} />
-          <span className={styles.indicator}>x2</span>
-        </label>
-      </main>
+      {/* icons */}
+      {/* <Icons ratio={checked ? 2 : 1} /> */}
+      <Search IconsData={IconsData} />
+      {/* Size toggle */}
     </div>
   );
 }
