@@ -73,10 +73,18 @@ export default function Home() {
         <span className={styles.figma}>
           <model-viewer
             camera-controls
-            src="../1.glb"
+            src="../8.gltf"
             alt="A 3D model of an astronaut"
+            // environment-image="../1.hdr"
+            camera-orbit="0deg 75deg 400%"
+            shadow-intensity="0"
+            auto-rotate
+            rotation-per-second="100deg"
+            max-field-of-view="100deg"
+            min-field-of-view="70deg"
+            max-camera-orbit="200deg"
+            // camera-target="0m 0m 0m"
           ></model-viewer>
-          Figma
         </span>
       </main>
     </div>
