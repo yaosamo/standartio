@@ -17,7 +17,6 @@
   align-content: center;
   background: #fff;
   border-radius: 0.25rem;
-  border: 2px solid transparent;
 }
 
 .search {
@@ -77,6 +76,16 @@
   visibility: hidden;
 }
 
+.figma {
+  background: #fff;
+  border-radius: 0.25rem;
+  font-size: 1.5rem;
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
 /* create :after style it as circle and put below x2 */
 .indicator {
   width: 3em;
@@ -106,9 +115,9 @@
   opacity: 1;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
-}
+} */
