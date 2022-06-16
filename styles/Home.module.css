@@ -19,6 +19,15 @@
   border-radius: 0.25rem;
 }
 
+@keyframes lol {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(200deg);
+  }
+}
+
 .search {
   display: grid;
   grid-column-start: 1;
@@ -58,7 +67,6 @@
   background: #fff;
   border-radius: 0.25rem;
   font-size: 1.5rem;
-  border: 2px solid transparent;
 }
 
 .setting_size {
@@ -87,8 +95,49 @@
 }
 
 .figma model-viewer {
-  width: 100%;
+  width: 50%;
   height: 100%;
+}
+
+.figma .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.figma p {
+  color: #646464;
+  font-size: 0.75rem;
+  letter-spacing: 0.015em;
+}
+
+.about {
+  background: #fff;
+  border-radius: 0.25rem;
+  font-size: 1.5rem;
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 6;
+  grid-row-end: 8;
+  padding: 1em;
+}
+
+.about p {
+  color: #646464;
+  font-size: 0.75rem;
+  letter-spacing: 0.015em;
+  line-height: 150%;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.link {
+  color: #7838e2;
+  font-weight: 500;
 }
 
 /* create :after style it as circle and put below x2 */

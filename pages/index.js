@@ -71,18 +71,47 @@ export default function Home() {
           <span className={styles.indicator}>x2</span>
         </label>
         <span className={styles.figma}>
-          <model-viewer
-            camera-controls
-            src="../8.gltf"
-            alt="A 3D model of an astronaut"
-            camera-orbit="0deg 75deg 400%"
-            shadow-intensity="0"
-            auto-rotate
-            rotation-per-second="100deg"
-            max-field-of-view="100deg"
-            min-field-of-view="70deg"
-            max-camera-orbit="200deg"
-          ></model-viewer>
+          <div className={styles.container}>
+            <model-viewer
+              camera-controls
+              src="../8.gltf"
+              alt="A 3D model of an astronaut"
+              camera-orbit="0deg 90deg 400%"
+              shadow-intensity="0"
+              auto-rotate
+              rotation-per-second="100deg"
+              max-field-of-view="100deg"
+              min-field-of-view="70deg"
+              max-camera-orbit="200deg"
+            ></model-viewer>
+            <p>
+              Figma{" "}
+              <a className={styles.link} href="/404" target="_blank">
+                Library File
+              </a>
+            </p>
+          </div>
+        </span>
+        <span className={styles.about}>
+          <p className={styles.title}>A word about Standartio</p>
+          <p>
+            How do you like new website? I’ll try to bring back some of the
+            older icons. For now you can just{" "}
+            <a className={styles.link} href="/404" target="_blank">
+              download them as a zip.
+            </a>
+            <br /> <br />
+            If you’re new here, this is{" "}
+            <a className={styles.link} href="/404" target="_blank">
+              @yaosamo’s
+            </a>{" "}
+            project & I like to design icons. There’s no trackers in here too
+            btw. Oh and here’s the{" "}
+            <a className={styles.link} href="/404" target="_blank">
+              license
+            </a>{" "}
+            (psst, it’s free)
+          </p>
         </span>
       </main>
     </div>
