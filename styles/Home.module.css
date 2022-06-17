@@ -291,6 +291,6 @@
 /* L display 1441 > 2550 */
 @media (max-width: 2550px) {
   .about {
-    grid-row: 3/3;
+    grid-row: 6/6;
   }
 }
