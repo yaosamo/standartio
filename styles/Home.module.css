@@ -290,5 +290,7 @@
 
 /* L display 1441 > 2550 */
 @media (max-width: 2550px) {
-  /* TBD */
+  .about {
+    grid-row: 3/3;
+  }
 }
