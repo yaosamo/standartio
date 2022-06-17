@@ -2,26 +2,246 @@
   {
     "url": "/icons/arrow-right.svg",
     "name": "Arrow Right",
-    "tags": "right, arrow right"
+    "tags": "Right, Arrow, Direction, >, Forward"
   },
   {
     "url": "/icons/arrow-up.svg",
     "name": "Arrow Up",
-    "tags": "Up, Arrow, Directions"
+    "tags": "Up, Arrow, Direction, ^"
   },
   {
     "url": "/icons/arrow-left.svg",
     "name": "Arrow Left",
-    "tags": ""
+    "tags": "Left, <, Arrow, Direction, Back"
   },
   {
     "url": "/icons/arrow-down.svg",
     "name": "Arrow Down",
-    "tags": ""
+    "tags": "Down, Arrow, Direction"
   },
   {
     "url": "/icons/2-chevron-right.svg",
+    "name": "2 Chevron Right",
+    "tags": "Right, Arrow, Direction, Chevron, Forward, Go"
+  },
+  {
+    "url": "/icons/2-horizontal-lines.svg",
+    "name": "2 Horizontal Lines",
+    "tags": "Menu, Hamburger, Lines, Equal,Navigation, Nav"
+  },
+  {
+    "url": "/icons/3-horizontal-lines.svg",
+    "name": "3 Horizontal Lines",
+    "tags": "Menu, Hamburger, Lines, Navigation, Nav"
+  },
+  {
+    "url": "/icons/arrow-down-square.svg",
+    "name": "Arrow Down Square",
+    "tags": "Arrow, Down, Download, Incoming"
+  },
+  {
+    "url": "/icons/arrow-triangle-down.svg",
+    "name": "Arrow Triangle Down",
+    "tags": "Arrow, Down, Triangle, Dropdown, Select, Direction"
+  },
+  {
+    "url": "/icons/arrow-triangle-left.svg",
+    "name": "Arrow Triangle Left",
+    "tags": "Arrow, Left, <, Triangle, Back, Direction"
+  },
+  {
+    "url": "/icons/arrow-triangle-right.svg",
+    "name": "Arrow Triangle Right",
+    "tags": "Arrow, Right, >, Triangle, Forward, Direction"
+  },
+  {
+    "url": "/icons/arrow-triangle-up.svg",
+    "name": "Arrow Triangle Up",
+    "tags": "Arrow, Up, Triangle, Forward, Direction, Select, Dropdown"
+  },
+  {
+    "url": "/icons/arrow-up-arrow-down.svg",
+    "name": "Arrow Up Arrow Down",
+    "tags": "Up, Down, Arrows, Exchange, Transfer, Trade, ^"
+  },
+  {
+    "url": "/icons/arrow-up-right-square.svg",
+    "name": "Arrow Up Right Square",
+    "tags": "Up, Right, Link, External, Pop-up"
+  },
+  {
+    "url": "/icons/arrow-up-right.svg",
+    "name": "Arrow Up Right",
+    "tags": "Up, Right, Link, External, Pop-up, Direction, Trending"
+  },
+  {
+    "url": "/icons/arrow-up-square.svg",
+    "name": "Arrow Up Square",
+    "tags": "Up, Share, Arrow, Send"
+  },
+  {
+    "url": "/icons/arrow-up.svg",
+    "name": "Arrow Up",
+    "tags": "Up, ^, Arrow, Direction, Trending"
+  },
+  {
+    "url": "/icons/at.svg",
+    "name": "At",
+    "tags": "@, at, email"
+  },
+  {
+    "url": "/icons/bell.svg",
+    "name": "Bell",
+    "tags": "Bell, Notification, Updates, New"
+  },
+  {
+    "url": "/icons/checkmark-circle.svg",
+    "name": "Checkmark Circle",
+    "tags": "Checkmark, Circle, Done, Complete, Success, Finish"
+  },
+  {
+    "url": "/icons/checkmark.svg",
+    "name": "Checkmark",
+    "tags": "Checkmark, Circle, Done, Complete, Success, Finish"
+  },
+  {
+    "url": "/icons/chevron-down.svg",
+    "name": "Chevron Down",
+    "tags": "Down, Arrow, Direction, Dropdown, Select, Expand"
+  },
+  {
+    "url": "/icons/chevron-left.svg",
+    "name": "Chevron Left",
+    "tags": "Left, <, Arrow, Direction, Back"
+  },
+  {
+    "url": "/icons/chevron-narrow-down.svg",
+    "name": "Chevron Narrow Down",
+    "tags": "Down, Arrow, Direction, Swipe, Pull"
+  },
+  {
+    "url": "/icons/chevron-right.svg",
     "name": "Chevron Right",
-    "tags": ""
+    "tags": "Right, Arrow, Direction, Chevron, Forward, Next"
+  },
+  {
+    "url": "/icons/chevron-up.svg",
+    "name": "Chevron Up",
+    "tags": "Arrow, Up, ^, Direction, Select, Dropdown, Minimize"
+  },
+  {
+    "url": "/icons/clock.svg",
+    "name": "Clock",
+    "tags": "Clock, History, Time"
+  },
+  {
+    "url": "/icons/doc.svg",
+    "name": "Doc",
+    "tags": "Doc, Document, Read, Paper, File"
+  },
+  {
+    "url": "/icons/ellipsis.svg",
+    "name": "Ellipsis",
+    "tags": "Menu, Ellipsis, Extra, Options"
+  },
+  {
+    "url": "/icons/gear.svg",
+    "name": "Gear",
+    "tags": "Gear, Setting, Preference"
+  },
+  {
+    "url": "/icons/globe.svg",
+    "name": "Globe",
+    "tags": "World, Globe, Planet, Earth, Link"
+  },
+  {
+    "url": "/icons/heart.svg",
+    "name": "Heart",
+    "tags": "Heart, Like"
+  },
+  {
+    "url": "/icons/horizontal-line-filter.svg",
+    "name": "Horizontal Line Filter",
+    "tags": "Filter, Sort"
+  },
+  {
+    "url": "/icons/house.svg",
+    "name": "House",
+    "tags": "Home, House, Main"
+  },
+  {
+    "url": "/icons/info-circle.svg",
+    "name": "Info Circle",
+    "tags": "Info, Tip, Tooltip, Help"
+  },
+  {
+    "url": "/icons/exclamation-mark-circle.svg",
+    "name": "Exclamation Mark Circle",
+    "tags": "Attention, Danger, Exclamation, Warning"
+  },
+  {
+    "url": "/icons/key.svg",
+    "name": "Key",
+    "tags": "Key, Open, Unlock, Login, Secure"
+  },
+  {
+    "url": "/icons/list.svg",
+    "name": "List",
+    "tags": "List, Items, Bullet, Checklist"
+  },
+  {
+    "url": "/icons/lock.svg",
+    "name": "Lock",
+    "tags": "Lock, Unlock, Secure, Private"
+  },
+  {
+    "url": "/icons/magnifying-glass.svg",
+    "name": "Magnifying Glass",
+    "tags": "Search, Magnifying, Zoom"
+  },
+  {
+    "url": "/icons/person.svg",
+    "name": "Person",
+    "tags": "User, Person, Account, Login"
+  },
+  {
+    "url": "/icons/plus.svg",
+    "name": "Plus",
+    "tags": "Plus, Add, Increase, Create, New"
+  },
+  {
+    "url": "/icons/question-mark-circle.svg",
+    "name": "Question Mark Circle",
+    "tags": "Question, Help, Info"
+  },
+  {
+    "url": "/icons/sparkle.svg",
+    "name": "Sparkle",
+    "tags": "Sparkle, New, Shine, Update, Exciting"
+  },
+  {
+    "url": "/icons/sparkles.svg",
+    "name": "Sparkles",
+    "tags": "Sparkle, New, Shine, Update, Exciting"
+  },
+  {
+    "url": "/icons/square-grid.svg",
+    "name": "Square Grid",
+    "tags": "Grid, Menu, View"
+  },
+  {
+    "url": "/icons/trash.svg",
+    "name": "Trash",
+    "tags": "Trash, Delete"
+  },
+  {
+    "url": "/icons/x-mark-circle.svg",
+    "name": "X Mark Circle",
+    "tags": "X, Close, Cancel, Clear"
+  },
+  {
+    "url": "/icons/x-mark.svg",
+    "name": "X Mark",
+    "tags": "X, Close, Cancel, Clear"
   }
 ]
