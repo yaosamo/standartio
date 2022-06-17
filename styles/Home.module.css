@@ -288,8 +288,8 @@
   }
 }
 
-/* L display 1441 > 2550 */
-@media (max-width: 2550px) {
+/* L display 1600 > infinity baby */
+@media (min-width: 1600px) {
   .about {
     grid-row: 6/6;
   }
