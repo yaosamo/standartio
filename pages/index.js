@@ -5,14 +5,48 @@ import IconsData from "../components/icons.json";
 import Script from "next/script";
 import React, { useState } from "react";
 
+function FigmaWidget() {
+  return (
+    <span className={styles.figma}>
+      <div className={styles.container}>
+        <model-viewer
+          camera-controls
+          src="../8.gltf"
+          alt="A 3D model of an astronaut"
+          camera-orbit="0deg 90deg 400%"
+          shadow-intensity="0"
+          auto-rotate
+          rotation-per-second="100deg"
+          max-field-of-view="100deg"
+          min-field-of-view="70deg"
+          max-camera-orbit="200deg"
+        ></model-viewer>
+        <p>
+          Figma{" "}
+          <a className={styles.link} href="/404" target="_blank">
+            Library File
+          </a>
+        </p>
+      </div>
+    </span>
+  );
+}
+
+function HideWidgets(props) {
+  const showWidgets = props.showWidgets;
+  if (showWidgets) {
+    return <FigmaWidget />;
+  }
+}
+
 export default function Home() {
   const [checked, setChecked] = useState(false);
-
   const handleSizeChange = () => {
     setChecked(!checked);
   };
 
   const [searchField, setSearchField] = useState("");
+  const [showWidget, setShowWidget] = useState(true);
 
   const IconsSorted = []
     .concat(IconsData)
@@ -27,6 +61,8 @@ export default function Home() {
 
   const handleSearchChange = (e) => {
     setSearchField(e.target.value);
+    let showWidget =
+      e.target.value != "" ? setShowWidget(false) : setShowWidget(true);
   };
 
   return (
@@ -70,28 +106,8 @@ export default function Home() {
           <input type="checkbox" onChange={handleSizeChange} />
           <span className={styles.indicator}>x2</span>
         </label>
-        <span className={styles.figma}>
-          <div className={styles.container}>
-            <model-viewer
-              camera-controls
-              src="../8.gltf"
-              alt="A 3D model of an astronaut"
-              camera-orbit="0deg 90deg 400%"
-              shadow-intensity="0"
-              auto-rotate
-              rotation-per-second="100deg"
-              max-field-of-view="100deg"
-              min-field-of-view="70deg"
-              max-camera-orbit="200deg"
-            ></model-viewer>
-            <p>
-              Figma{" "}
-              <a className={styles.link} href="/404" target="_blank">
-                Library File
-              </a>
-            </p>
-          </div>
-        </span>
+        {/* Figma */}
+        <HideWidgets showWidgets={showWidget} />
         <span className={styles.about}>
           <p className={styles.title}>A word about Standartio</p>
           <p>
