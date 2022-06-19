@@ -32,11 +32,30 @@ function FigmaWidget() {
   );
 }
 
-function HideWidgets(props) {
-  const showWidgets = props.showWidgets;
-  if (showWidgets) {
-    return <FigmaWidget />;
-  }
+function AboutWidget() {
+  return (
+    <span className={styles.about}>
+      <p className={styles.title}>A word about Standartio</p>
+      <p>
+        How do you like new website? I’ll try to bring back some of the older
+        icons. For now you can just{" "}
+        <a className={styles.link} href="/404" target="_blank">
+          download them as a zip.
+        </a>
+        <br /> <br />
+        If you’re new here, this is{" "}
+        <a className={styles.link} href="/404" target="_blank">
+          @yaosamo’s
+        </a>{" "}
+        project & I like to design icons. There’s no trackers in here too btw.
+        Oh and here’s the{" "}
+        <a className={styles.link} href="/404" target="_blank">
+          license
+        </a>{" "}
+        (psst, it’s free for commercial projects)
+      </p>
+    </span>
+  );
 }
 
 export default function Home() {
@@ -45,8 +64,7 @@ export default function Home() {
     setChecked(!checked);
   };
 
-  const [searchField, setSearchField] = useState("");
-  const [showWidget, setShowWidget] = useState(true);
+  const [searchFieldValue, setSearchField] = useState("");
 
   const IconsSorted = []
     .concat(IconsData)
@@ -54,15 +72,13 @@ export default function Home() {
 
   const filteredIcons = IconsSorted.filter((icon) => {
     return (
-      icon.tags.toLowerCase().includes(searchField.toLowerCase()) ||
-      icon.name.toLowerCase().includes(searchField.toLowerCase())
+      icon.tags.toLowerCase().includes(searchFieldValue.toLowerCase()) ||
+      icon.name.toLowerCase().includes(searchFieldValue.toLowerCase())
     );
   });
 
   const handleSearchChange = (e) => {
     setSearchField(e.target.value);
-    let showWidget =
-      e.target.value != "" ? setShowWidget(false) : setShowWidget(true);
   };
 
   return (
@@ -106,29 +122,10 @@ export default function Home() {
           <input type="checkbox" onChange={handleSizeChange} />
           <span className={styles.indicator}>x2</span>
         </label>
-        {/* Figma */}
-        <HideWidgets showWidgets={showWidget} />
-        <span className={styles.about}>
-          <p className={styles.title}>A word about Standartio</p>
-          <p>
-            How do you like new website? I’ll try to bring back some of the
-            older icons. For now you can just{" "}
-            <a className={styles.link} href="/404" target="_blank">
-              download them as a zip.
-            </a>
-            <br /> <br />
-            If you’re new here, this is{" "}
-            <a className={styles.link} href="/404" target="_blank">
-              @yaosamo’s
-            </a>{" "}
-            project & I like to design icons. There’s no trackers in here too
-            btw. Oh and here’s the{" "}
-            <a className={styles.link} href="/404" target="_blank">
-              license
-            </a>{" "}
-            (psst, it’s free)
-          </p>
-        </span>
+        {/* Figma Widget */}
+        {!searchFieldValue && <FigmaWidget />}
+        {/* About Widget */}
+        {!searchFieldValue && <AboutWidget />}
       </main>
     </div>
   );
