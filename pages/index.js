@@ -2,6 +2,8 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import IconsList from "../components/iconslist";
 import IconsData from "../components/icons.json";
+import EmptyResults from "../components/emptyresults";
+import YaosamoSearch from "../components/searchyaosamo";
 import Script from "next/script";
 import React, { useState } from "react";
 
@@ -126,6 +128,9 @@ export default function Home() {
         {!searchFieldValue && <FigmaWidget />}
         {/* About Widget */}
         {!searchFieldValue && <AboutWidget />}
+        {/* Search Result */}
+        {filteredIcons < 1 && searchFieldValue != "yaosamo" && <EmptyResults />}
+        {searchFieldValue === "yaosamo" && <YaosamoSearch />}
       </main>
     </div>
   );
