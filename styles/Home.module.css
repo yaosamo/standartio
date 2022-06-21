@@ -19,7 +19,7 @@
   min-height: 12.2vw;
 }
 
-.iconshape:hover .icon {
+.iconAnimated {
   animation: spin 0.8s ease both;
 }
 
@@ -29,6 +29,20 @@
   }
   100% {
     transform: rotateY(360deg);
+  }
+}
+
+.iconshape:hover .label {
+  animation: download 1.6s ease both infinite;
+}
+
+@keyframes download {
+  0%,
+  50% {
+    transform: translateY(0em);
+  }
+  25% {
+    transform: translateY(0.2em);
   }
 }
 
