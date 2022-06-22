@@ -123,7 +123,6 @@ export default function Home() {
             autoComplete="off"
             autoCorrect="off"
             autoFocus=""
-            role="combobox"
             spellCheck="false"
             title="Search"
             placeholder="Search"
