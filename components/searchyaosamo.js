@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
 
 export default function SearchYaosamo() {
-  return <p>yaosamo login</p>;
+  return <p>Wow you've found a secret!</p>;
 }

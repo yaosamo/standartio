@@ -48,12 +48,11 @@
 
 .search {
   display: grid;
-  grid-column-start: 1;
-  grid-column-end: 8;
-  grid-row-start: 1;
-  grid-row-end: 1;
+  grid-column: 1/9;
+  grid-row: 1/1;
   background: #f5f5f5;
   border-radius: 0.25rem;
+  min-height: 12.2vw;
 }
 
 .search_input {
@@ -80,16 +79,15 @@
 }
 
 .setting_size {
+  user-select: none;
   justify-content: center;
   align-content: center;
   background: #fff;
   border-radius: 0.25rem;
   font-size: 1.5rem;
   display: grid;
-  grid-column-start: 8;
-  grid-column-end: 8;
-  grid-row-start: 1;
-  grid-row-end: 1;
+  grid-column: 1/1;
+  grid-row: 2/2;
   cursor: pointer;
   min-height: 12.2vw;
 }
@@ -97,6 +95,26 @@
 .setting_size input {
   position: absolute;
   visibility: hidden;
+}
+
+/* create :after style it as circle and put below x2 */
+.indicator {
+  width: 3em;
+  height: 3em;
+  opacity: 1;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  border-radius: 100%;
+}
+
+.setting_size:hover .indicator {
+  background-color: #f1f1f1;
+  opacity: 1;
+}
+
+.setting_size input:checked ~ .indicator {
+  font-size: 2em;
 }
 
 .figma {
@@ -155,33 +173,12 @@
   font-weight: 500;
 }
 
-/* create :after style it as circle and put below x2 */
-.indicator {
-  width: 3em;
-  height: 3em;
-  opacity: 1;
-  justify-content: center;
-  align-content: center;
-  display: grid;
-  border-radius: 100%;
-}
-
 .label {
   padding-top: 0.5rem;
   color: #646464;
   font-size: 0.75rem;
   letter-spacing: 0.015em;
   text-align: center;
-}
-
-.setting_size:hover .indicator {
-  background-color: #f1f1f1;
-  opacity: 1;
-}
-
-.setting_size input:checked ~ .indicator {
-  background-color: #e1e1e1;
-  opacity: 1;
 }
 
 /* XXS 320 > 720 */
@@ -191,15 +188,9 @@
   }
 
   .search {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1/3;
+    grid-row: 1/1;
     min-height: 30vw;
-  }
-
-  .setting_size {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 2/2;
   }
 
   .iconshape,
@@ -226,13 +217,9 @@
   }
 
   .search {
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
-
-  .setting_size {
-    grid-column-start: 4;
-    grid-column-end: 4;
+    grid-column: 1/5;
+    grid-row: 1/1;
+    min-height: 20vw;
   }
 
   .iconshape,
@@ -258,13 +245,9 @@
   }
 
   .search {
-    grid-column-start: 1;
-    grid-column-end: 6;
-  }
-
-  .setting_size {
-    grid-column-start: 6;
-    grid-column-end: 6;
+    grid-column: 1/7;
+    grid-row: 1/1;
+    min-height: 12.2vw;
   }
 
   .iconshape,
@@ -290,13 +273,9 @@
   }
 
   .search {
-    grid-column-start: 1;
-    grid-column-end: 8;
-  }
-
-  .setting_size {
-    grid-column-start: 8;
-    grid-column-end: 8;
+    grid-column: 1/9;
+    grid-row: 1/1;
+    min-height: 12.2vw;
   }
 
   .iconshape,
