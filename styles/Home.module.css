@@ -16,6 +16,7 @@
   align-content: center;
   background: #fff;
   border-radius: 0.25rem;
+  width: 100%;
   min-height: 12.2vw;
 }
 
@@ -193,12 +194,6 @@
     min-height: 30vw;
   }
 
-  .iconshape,
-  .setting_size,
-  .figma {
-    min-height: 49vw;
-  }
-
   .figma {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -207,6 +202,12 @@
   .about {
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+
+  .iconshape,
+  .setting_size,
+  .figma {
+    min-height: 49vw;
   }
 }
 

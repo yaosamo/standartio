@@ -25,7 +25,12 @@ function FigmaWidget() {
         ></model-viewer>
         <p>
           Figma{" "}
-          <a className={styles.link} href="/404" target="_blank">
+          <a
+            className={styles.link}
+            href="https://www.figma.com/community/file/1118765940009688786"
+            rel="noreferrer"
+            target="_blank"
+          >
             Library File
           </a>
         </p>
@@ -46,12 +51,17 @@ function AboutWidget() {
         </a>
         <br /> <br />
         If you’re new here, this is{" "}
-        <a className={styles.link} href="/404" target="_blank">
+        <a
+          className={styles.link}
+          href="https://twitter.com/yaosamo/"
+          rel="noreferrer"
+          target="_blank"
+        >
           @yaosamo’s
         </a>{" "}
-        project & I like to design icons. There’s no trackers in here too btw.
-        Oh and here’s the{" "}
-        <a className={styles.link} href="/404" target="_blank">
+        project & I like to design icons. Absolutely no trackers in here too
+        btw. Oh and here’s the{" "}
+        <a className={styles.link} href="/404" rel="noreferrer" target="_blank">
           license
         </a>{" "}
         (psst, it’s free for commercial projects)
