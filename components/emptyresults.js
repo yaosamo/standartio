@@ -30,9 +30,12 @@ export default function EmptyResults(props) {
       });
   }
   return (
-    <p>
-      No icons found, maybe try other search or want to submit request for an
-      icon just click <button onClick={write}>here</button>
-    </p>
+    <div className={styles.nothingFound}>
+      <h1>No icons found </h1>
+      <p>Or maybe you want to submit request? It’s just one click.</p>
+      <button className={styles.requestButton} onClick={write}>
+        Please add <b>{props.iconrequested}</b> icon
+      </button>
+    </div>
   );
 }
