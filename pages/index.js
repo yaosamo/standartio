@@ -46,7 +46,11 @@ function AboutWidget() {
       <p>
         How do you like new website? I’ll try to bring back some of the older
         icons. For now you can just{" "}
-        <a className={styles.link} href="/404" target="_blank">
+        <a
+          className={styles.link}
+          href="/standartio-archive.zip"
+          download="Archived icons"
+        >
           download them as a zip.
         </a>
         <br /> <br />
@@ -59,9 +63,14 @@ function AboutWidget() {
         >
           @yaosamo’s
         </a>{" "}
-        project & I like to design icons. Absolutely no trackers in here too
-        btw. Oh and here’s the{" "}
-        <a className={styles.link} href="/404" rel="noreferrer" target="_blank">
+        project & Icons is one of my passions. Also absolutely no trackers in
+        here. Oh and here’s the{" "}
+        <a
+          className={styles.link}
+          href="https://github.com/yaosamo/standartio/blob/main/License_and_Privacy_Policy.md"
+          rel="noreferrer"
+          target="_blank"
+        >
           license
         </a>{" "}
         (psst, it’s free for commercial projects)

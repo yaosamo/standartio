@@ -39,10 +39,12 @@
 
 @keyframes download {
   0%,
-  50% {
+  15%,
+  45% {
     transform: translateY(0em);
   }
-  25% {
+  35%,
+  55% {
     transform: translateY(0.2em);
   }
 }
