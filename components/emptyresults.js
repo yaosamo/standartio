@@ -1,6 +1,11 @@
 import styles from "../styles/Home.module.css";
+import React, { useState } from "react";
 
 export default function EmptyResults(props) {
+  const [disable, setDisable] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
   const request = {
     Requested: props.iconrequested,
     "Created at": new Date(),
@@ -8,6 +13,8 @@ export default function EmptyResults(props) {
 
   function write() {
     // Add one line to the sheet
+    setDisable(true);
+
     fetch(
       "https://sheet.best/api/sheets/6af17142-ce25-4892-8aee-efcdf8445f4a",
       {
@@ -22,19 +29,29 @@ export default function EmptyResults(props) {
       .then((r) => r.json())
       .then((request) => {
         // The response comes here
-        console.log(request);
+        setSuccess(true);
       })
       .catch((error) => {
         // Errors are reported there
         console.log(error);
+        setDisable(false);
+        setError(true);
       });
   }
   return (
     <div className={styles.nothingFound}>
-      <h1>No icons found </h1>
-      <p>Or maybe you want to submit request? It’s just one click.</p>
-      <button className={styles.requestButton} onClick={write}>
-        Please add <b>{props.iconrequested}</b> icon
+      <h1>No icons found. Want to submit request? It’s just one click.</h1>
+      <button
+        className={styles.requestButton}
+        onClick={write}
+        disabled={disable}
+      >
+        <b>
+          {!disable && "Please add " + props.iconrequested + " icon"}
+          {disable && !success && "Sending request"}
+          {success && "Thank you, we got your request!"}
+          {error && "Couldn't send. Try again."}
+        </b>
       </button>
     </div>
   );
