@@ -4,7 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: #f0f0f0;
+  background: var(--Surface15);
+  color: var(--text-medium);
 }
 
 a {
@@ -17,4 +18,26 @@ a {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   transition: all 0.15s ease;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --Surface00: #fff; /* iconshape */
+    --Surface10: #fafafa; /* icon hover */
+    --Surface15: #f1f1f1; /* background */
+    --Surface20: #d7d7d7; /* border on active */
+    --text-medium: #646464;
+    --primary: #7838e2;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --Surface00: #2d2d2d; /* iconshape */
+    --Surface10: #323232; /* icon hover */
+    --Surface15: #252525; /* background */
+    --Surface20: #3c3c3c; /* border on active */
+    --text-medium: #828282;
+    --primary: #a46efc;
+  }
 }

@@ -70,6 +70,11 @@
     "tags": "Up, Right, Link, External, Pop-up"
   },
   {
+    "url": "/icons/arrow-down-right.svg",
+    "name": "Arrow Down Right",
+    "tags": "Down, Right, Trend"
+  },
+  {
     "url": "/icons/arrow-up-right.svg",
     "name": "Arrow Up Right",
     "tags": "Up, Right, Link, External, Pop-up, Direction, Trending"
@@ -243,5 +248,10 @@
     "url": "/icons/x-mark.svg",
     "name": "X Mark",
     "tags": "X, Close, Cancel, Clear"
+  },
+  {
+    "url": "/icons/star.svg",
+    "name": "Star",
+    "tags": "Favorite, Bookmark"
   }
 ]
