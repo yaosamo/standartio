@@ -42,7 +42,7 @@ export default function Home() {
         <meta property="og:url" content="https://standart.io" />
         <meta property="og:title" content="Standartio" />
         <meta property="og:description" content="Free and open source icons" />
-        <meta property="og:image" content="https://standart.io/intro.jpg" />
+        <meta property="og:image" content="https://standart.io/Intro.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Standartio" />
         <meta name="description" content="Free and open source icons" />
