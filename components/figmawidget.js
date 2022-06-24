@@ -1,6 +1,6 @@
 import styles from "../styles/Home.module.css";
 
-export default function FigmaWidget() {
+export default function FigmaWidget(theme) {
   return (
     <span className={styles.figma}>
       <div className={styles.container}>
@@ -16,6 +16,7 @@ export default function FigmaWidget() {
           min-field-of-view="70deg"
           max-camera-orbit="200deg"
           interaction-prompt="none"
+          exposure="0.6"
         ></model-viewer>
         <p>
           Figma{" "}
