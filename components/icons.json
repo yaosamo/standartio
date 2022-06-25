@@ -253,5 +253,10 @@
     "url": "/icons/star.svg",
     "name": "Star",
     "tags": "Favorite, Bookmark"
+  },
+  {
+    "url": "/icons/person-in-a-hat.svg",
+    "name": "Person in a Hat",
+    "tags": "Mitesh, Person, Hat, Guy"
   }
 ]
