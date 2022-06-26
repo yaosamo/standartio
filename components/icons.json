@@ -258,5 +258,20 @@
     "url": "/icons/person-in-a-hat.svg",
     "name": "Person in a Hat",
     "tags": "Mitesh, Hat, Guy, Person"
+  },
+  {
+    "url": "/icons/power-button.svg",
+    "name": "Power Button",
+    "tags": "Power, toggle, switch"
+  },
+  {
+    "url": "/icons/toggle-on.svg",
+    "name": "Toggle On",
+    "tags": "Toggle, switch"
+  },
+  {
+    "url": "/icons/toggle-off.svg",
+    "name": "Toggle Off",
+    "tags": "Toggle, switch"
   }
 ]
