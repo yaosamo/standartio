@@ -267,11 +267,16 @@
   {
     "url": "/icons/toggle-on.svg",
     "name": "Toggle On",
-    "tags": "Toggle, switch"
+    "tags": "Toggle, Switch, 开关"
   },
   {
     "url": "/icons/toggle-off.svg",
     "name": "Toggle Off",
-    "tags": "Toggle, switch"
+    "tags": "Toggle, Switch, 开关"
+  },
+  {
+    "url": "/icons/bottle.svg",
+    "name": "Bottle",
+    "tags": "Bottle, Ketchup, Soda, Drink, Water"
   }
 ]
