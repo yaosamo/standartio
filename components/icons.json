@@ -85,11 +85,6 @@
     "tags": "Up, Share, Arrow, Send"
   },
   {
-    "url": "/icons/arrow-up.svg",
-    "name": "Arrow Up",
-    "tags": "Up, ^, Arrow, Direction, Trending"
-  },
-  {
     "url": "/icons/at.svg",
     "name": "At",
     "tags": "@, at, email"
@@ -290,11 +285,6 @@
     "tags": "Chart, Bars, Analytics, Dashboard, Report"
   },
   {
-    "url": "/icons/3-bars.svg",
-    "name": "3 Bars",
-    "tags": "Chart, Bars, Analytics, Dashboard, Report"
-  },
-  {
     "url": "/icons/envelope.svg",
     "name": "Envelope",
     "tags": "Email, Mail"
@@ -323,5 +313,10 @@
     "url": "/icons/chevron-left-slash-chevron-right.svg",
     "name": "Chevron Left Slash Chevron Right",
     "tags": "Code, Dev"
+  },
+  {
+    "url": "/icons/flag.svg",
+    "name": "Flag",
+    "tags": "Flag, Favorite, Special"
   }
 ]
