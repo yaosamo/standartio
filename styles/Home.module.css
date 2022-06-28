@@ -12,11 +12,12 @@
 
 .iconshape {
   display: grid;
-  justify-content: center;
   align-content: center;
+  text-align: center;
   background: var(--Surface00);
   border-radius: 0.25rem;
   min-height: 12.2vw;
+  user-select: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -127,6 +128,7 @@
 }
 
 .figma {
+  user-select: none;
   background: var(--Surface00);
   border-radius: 0.25rem;
   font-size: 1.5rem;
@@ -189,6 +191,7 @@
   letter-spacing: 0.015em;
   text-align: center;
   min-width: 10vw;
+  padding: 0em 1em;
 }
 
 .nothingFound {
