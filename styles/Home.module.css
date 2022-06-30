@@ -88,6 +88,40 @@
   box-sizing: border-box;
 }
 
+.ticker {
+  width: 100%;
+  display: grid;
+  height: 2.5em;
+  background: var(--Surface00);
+  grid-row: 2/2;
+  grid-column: 1/9;
+  border-radius: 0.25rem;
+  /* text-align: center; */
+  align-items: center;
+  overflow: hidden;
+  box-sizing: content-box;
+  padding-right: 100%;
+}
+
+.ticker div {
+  padding-left: 100%;
+  white-space: nowrap;
+  animation: ticker var(--duration-short) linear infinite;
+}
+
+.ticker_items_wrap item {
+  padding-right: 10vw;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
 .setting_size {
   user-select: none;
   justify-content: center;
@@ -97,7 +131,7 @@
   font-size: 1.5rem;
   display: grid;
   grid-column: 1/1;
-  grid-row: 2/2;
+  grid-row: 3/3;
   cursor: pointer;
   min-height: 12.2vw;
 }

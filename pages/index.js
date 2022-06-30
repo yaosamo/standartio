@@ -6,6 +6,7 @@ import EmptyResults from "../components/emptyresults";
 import YaosamoSearch from "../components/searchyaosamo";
 import FigmaWidget from "../components/figmawidget";
 import AboutWidget from "../components/aboutwidget";
+import NewIconsWidget from "../components/newiconswidget";
 import Script from "next/script";
 import React, { useState } from "react";
 
@@ -94,6 +95,7 @@ export default function Home() {
           <EmptyResults iconrequested={searchFieldValue} />
         )}
         {searchFieldValue === "yaosamo" && <YaosamoSearch />}
+        {<NewIconsWidget />}
       </main>
     </div>
   );

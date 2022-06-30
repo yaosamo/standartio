@@ -13,7 +13,7 @@ export default function FigmaWidget(theme) {
           auto-rotate
           rotation-per-second="100deg"
           max-field-of-view="100deg"
-          min-field-of-view="70deg"
+          min-field-of-view="95deg"
           max-camera-orbit="200deg"
           interaction-prompt="none"
           exposure="0.6"
