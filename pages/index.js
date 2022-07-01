@@ -95,7 +95,7 @@ export default function Home() {
           <EmptyResults iconrequested={searchFieldValue} />
         )}
         {searchFieldValue === "yaosamo" && <YaosamoSearch />}
-        {<NewIconsWidget />}
+        {/* {<NewIconsWidget />} */}
       </main>
     </div>
   );
