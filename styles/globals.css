@@ -18,6 +18,9 @@ a {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   transition: all 0.15s ease;
+  --duration-short: 10s;
+  --duration-medium: 15s;
+  --duration-long: 20s;
 }
 
 @media (prefers-color-scheme: light) {
