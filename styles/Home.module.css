@@ -101,26 +101,12 @@
 }
 
 .ticker_items_wrap {
-  border: 1px dotted red;
   display: flex;
   gap: 4rem;
   align-items: center;
   white-space: nowrap;
   box-sizing: content-box;
   animation: ticker calc(var(--duration-short) / 1) linear infinite;
-}
-
-@keyframes ticker {
-  0% {
-    transform: translate3d(100%, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-.ticker_item {
-  border: 1px dashed green;
 }
 
 .setting_size {
