@@ -28,6 +28,7 @@ export default function FigmaWidget(theme) {
           >
             Library File
           </a>
+          <p>Over 1k copies</p>
         </p>
       </div>
     </span>
