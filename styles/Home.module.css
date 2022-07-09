@@ -176,8 +176,7 @@
   color: var(--text-medium);
   font-size: 0.75rem;
   letter-spacing: 0.015em;
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
+  line-height: 160%;
 }
 
 .about {
