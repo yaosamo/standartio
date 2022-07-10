@@ -25,6 +25,11 @@
     filter: invert();
     opacity: 0.8;
   }
+
+  .ticker img {
+    filter: invert();
+    opacity: 0.4;
+  }
 }
 
 .iconAnimated {
@@ -107,6 +112,19 @@
   white-space: nowrap;
   box-sizing: content-box;
   animation: ticker calc(var(--duration-short) / 1) linear infinite;
+}
+
+.ticker_newicon {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.ticker p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-size: 1em;
 }
 
 .setting_size {
