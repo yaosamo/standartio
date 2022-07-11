@@ -15,6 +15,7 @@ export default function Home() {
   const handleSizeChange = () => {
     setChecked(!checked);
   };
+  console.log("greeting:", process.env.NEXT_PUBLIC_GREETING);
 
   const [searchFieldValue, setSearchField] = useState("");
 
