@@ -17,7 +17,6 @@ export default function EmptyResults(props) {
         private_key: process.env.NEXT_PUBLIC_GOOGLE_SERVICE_PRIVATE_KEY,
       });
       await doc.loadInfo();
-      console.log(doc.title);
 
       const sheet = doc.sheetsByIndex[0];
       await sheet.addRow({
@@ -29,7 +28,6 @@ export default function EmptyResults(props) {
       console.log("Here's what's wrong lol:", e);
       setSuccess(false);
       setError(true);
-      setDisable(false);
     }
   }
 
@@ -43,9 +41,9 @@ export default function EmptyResults(props) {
       >
         <b>
           {!disable && "Please add " + props.iconrequested + " icon"}
-          {disable && !success && "Sending request"}
+          {disable && !success && !error && "Sending request"}
           {success && "Thank you, we got your request!"}
-          {error && "Couldn't send. Try again."}
+          {error && disable && "Couldn't send. Try again."}
         </b>
       </button>
     </div>
