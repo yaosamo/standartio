@@ -25,6 +25,11 @@
     filter: invert();
     opacity: 0.8;
   }
+
+  .ticker img {
+    filter: invert();
+    opacity: 0.4;
+  }
 }
 
 .iconAnimated {
@@ -109,6 +114,23 @@
   animation: ticker calc(var(--duration-short) / 1) linear infinite;
 }
 
+.ticker_newicon {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ticker p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-size: 1em;
+}
+
+.ticker_newicon img {
+  min-width: 24px;
+}
+
 .setting_size {
   user-select: none;
   justify-content: center;
@@ -176,8 +198,7 @@
   color: var(--text-medium);
   font-size: 0.75rem;
   letter-spacing: 0.015em;
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
+  line-height: 160%;
 }
 
 .about {
