@@ -184,6 +184,7 @@
 .figma model-viewer {
   width: 50%;
   height: 100%;
+  --poster-color: transparent;
 }
 
 .figma .container {

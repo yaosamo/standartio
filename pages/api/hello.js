@@ -1,5 +1,11 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import NextAuth from "next-auth";
+import Providers from "next-auth/providers";
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
-}
+export default NextAuth({
+  providers: [
+    Providers.Twitter({
+      clientId: process.env.TWITTER_CONSUMER_KEY,
+      clientSecret: process.env.TWITTER_CONSUMER_SECRET,
+    }),
+  ],
+});

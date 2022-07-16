@@ -5,12 +5,14 @@ export default function FigmaWidget(theme) {
     <span className={styles.figma}>
       <div className={styles.container}>
         <model-viewer
+          loading="eager"
           camera-controls
           src="../8.gltf"
           alt="A 3D model of an astronaut"
           camera-orbit="0deg 90deg 400%"
           shadow-intensity="0"
           auto-rotate
+          // poster="../Intro.jpg"
           rotation-per-second="100deg"
           max-field-of-view="100deg"
           min-field-of-view="95deg"
