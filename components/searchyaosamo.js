@@ -5,7 +5,7 @@ export default function SearchYaosamo() {
   return (
     <>
       <p>Wow you have found a secret!</p>
-      <Link href={"/admin"}>Sign out</Link>
+      <Link href={"/admin"}>Open Admin Panel</Link>
     </>
   );
 }
