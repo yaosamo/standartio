@@ -1,5 +1,25 @@
 import styles from "../styles/Home.module.css";
+import IconsData from "../components/icons.json";
+import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
+
+function IconsList() {
+  return IconsData.map((Icon, i) => (
+    <a href={Icon.url} key={i} download={Icon.name}>
+      <div className={styles.iconshape}>
+        <Image
+          aria-label="Download Icon"
+          className={styles.iconAnimated}
+          src={Icon.url}
+          alt={Icon.name}
+          width={24}
+          height={24}
+        />
+        <p className={styles.label}>{Icon.name}</p>
+      </div>
+    </a>
+  ));
+}
 
 function AdminUI() {
   const { data: session } = useSession();
@@ -7,16 +27,18 @@ function AdminUI() {
     <div className={styles.admin}>
       <div className={styles.menu}>
         <a>Icons</a>
-        <a>Figma</a>
-        <a>About</a>
-        <a>Logout</a>
+        <a className={styles.inactive}>Figma</a>
+        <a className={styles.inactive}>About</a>
+        <button onClick={() => signOut()}>
+          <a className={styles.inactive}>Logout</a>
+        </button>
         <div>
           <p>Signed in as {session.user.email}</p>
-          <button onClick={() => signOut()}>Sign out</button>
         </div>
       </div>
       <div className={styles.icons}>
-        <p>2nd column</p>
+        <button>Upload Beautiful Icons →</button>
+        <IconsList />
       </div>
     </div>
   );

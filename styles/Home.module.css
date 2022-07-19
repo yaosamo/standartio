@@ -282,6 +282,7 @@
   display: flex;
   flex-direction: column;
   padding: 2em;
+  background: var(--Surface30);
 }
 
 .admin .menu a {
@@ -289,18 +290,51 @@
   font-weight: 900;
   line-height: 0.9em;
   color: white;
+  letter-spacing: -0.04em;
+}
+
+.admin .inactive {
+  opacity: 0.2;
+}
+
+.admin .menu button,
+.admin .icons button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
 }
 
 .admin .icons {
-  background-color: #000;
   font-size: 3em;
   height: 100vh;
   width: 100%;
   padding: 1em;
+  overflow-y: scroll;
+}
+
+.admin .icons button {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.8em;
+  padding-bottom: 1em;
 }
 
 .admin .login {
   padding: 3em;
+}
+
+.admin .iconshape {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 1.5em;
+  padding: 0.2em;
+}
+
+.admin .iconshape .label {
+  text-align: left;
 }
 
 /* XXS 320 > 720 */

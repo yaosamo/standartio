@@ -16,7 +16,7 @@ export default function IconLogic({ Icon, i, Ratio }) {
   }
 
   return (
-    <a href={Icon.url} filename="image.svg" key={i} download={Icon.name}>
+    <a href={Icon.url} filename={Icon.name} key={i} download={Icon.name}>
       <div className={styles.iconshape} onMouseEnter={() => handleMouseEnter()}>
         <Image
           aria-label="Download Icon"

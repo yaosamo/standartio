@@ -40,6 +40,7 @@ a {
     --Surface10: #323232; /* icon hover */
     --Surface15: #252525; /* background */
     --Surface20: #3c3c3c; /* border on active */
+    --Surface30: #1b1b1b; /* darkest */
     --text-medium: #828282;
     --primary: #a46efc;
   }
