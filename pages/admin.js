@@ -16,7 +16,7 @@ function AdminUI() {
         </div>
       </div>
       <div className={styles.icons}>
-        <p>that's 2nd column</p>
+        <p>2nd column</p>
       </div>
     </div>
   );
@@ -32,10 +32,7 @@ export default function Admin() {
     return (
       <div className={styles.admin}>
         <div className={styles.login}>
-          <p>
-            Well, hello! {session.user.name}. This is admin panel for Yaosamo.
-            You're not Yaosamo, can't show it to you but here's a pineapple 🍍
-          </p>
+          <p>Well, hello! {session.user.name}.</p>
           <button onClick={() => signOut()}>Sign out</button>
         </div>
       </div>
@@ -44,11 +41,7 @@ export default function Admin() {
   return (
     <div className={styles.admin}>
       <div className={styles.login}>
-        <p>
-          Yaosamo is it you? Sign in please. If you're not yaosamo, you can sign
-          in but it won't do anything :) Have a wonderful day!
-        </p>{" "}
-        <br />
+        <p>Login for Yaosamo</p> <br />
         <button onClick={() => signIn()}>Sign in</button>
       </div>
     </div>
