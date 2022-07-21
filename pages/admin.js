@@ -1,23 +1,12 @@
 import styles from "../styles/Home.module.css";
 import IconsData from "../components/icons.json";
-import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
+import IconElement from "../components/iconediting";
 
 function IconsList() {
-  return IconsData.map((Icon, i) => (
-    <a href={Icon.url} key={i} download={Icon.name}>
-      <div className={styles.iconshape}>
-        <Image
-          aria-label="Download Icon"
-          className={styles.iconAnimated}
-          src={Icon.url}
-          alt={Icon.name}
-          width={24}
-          height={24}
-        />
-        <p className={styles.label}>{Icon.name}</p>
-      </div>
-    </a>
+  const SortedLatestFirst = IconsData.reverse();
+  return SortedLatestFirst.map((Icon, i) => (
+    <IconElement Icon={Icon} key={i} />
   ));
 }
 
@@ -64,7 +53,7 @@ export default function Admin() {
     <div className={styles.admin}>
       <div className={styles.login}>
         <p>Login for Yaosamo</p> <br />
-        <button onClick={() => signIn()}>Sign in</button>
+        <button onClick={() => signIn("twitter")}>Sign in</button>
       </div>
     </div>
   );
