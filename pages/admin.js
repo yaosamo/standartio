@@ -21,12 +21,9 @@ function AdminUI() {
         <button onClick={() => signOut()}>
           <a className={styles.inactive}>Logout</a>
         </button>
-        <div>
-          <p>Signed in as {session.user.email}</p>
-        </div>
       </div>
       <div className={styles.icons}>
-        <button>Upload Beautiful Icons →</button>
+        <button className={styles.upload}>Upload Beautiful Icons →</button>
         <IconsList />
       </div>
     </div>
