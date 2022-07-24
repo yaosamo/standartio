@@ -1,19 +1,35 @@
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import { useSession, signIn, signOut } from "next-auth/react";
 import React, { useState } from "react";
+import fs from "fs";
+
+export async function getStaticProps() {
+  const fileNames = fs.readFile("../components/icons.json", (err, data) => {
+    if (err) throw err;
+    console.log(data);
+  });
+}
+
+function HandleChange(event) {
+  console.log(event);
+}
 
 function EditIcon({ Icon }) {
   return (
     <>
-      <form className={styles.editing} action="/send-data-here" method="post">
+      <form className={styles.editing}>
         <label>Name</label>
-        <input type="text" name="name" defaultValue={Icon.name} />
+        <input
+          type="text"
+          name="name"
+          onChange={(e) => HandleChange(e.target.value)}
+          defaultValue={Icon.name}
+        />
         <label>Tags</label>
         <input type="text" name="name" defaultValue={Icon.tags} />
         <label>Update File</label>
         <input className={styles.upload} type="file" name="file upload" />
-        <button type="submit">Save →</button>
+        <button>Save →</button>
       </form>
     </>
   );

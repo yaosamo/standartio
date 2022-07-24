@@ -361,11 +361,19 @@
   margin-block-end: 2em;
   background-color: var(--Surface15);
   border: none;
+  color: var(--text-medium);
 }
 
 .admin .editing input:active,
 .admin button:active {
   transform: scale(1.04);
+}
+
+.admin .editing textarea:focus,
+.admin .editing input:focus {
+  outline: none;
+  outline-color: black;
+  border: 0.1em solid var(--Surface10);
 }
 
 .editing label {
