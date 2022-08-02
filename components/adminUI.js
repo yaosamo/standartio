@@ -30,7 +30,7 @@ export default function AdminUI({ session }) {
       }
 
       if (data) {
-        setIcons(icons.concat(data));
+        setIcons(data);
       }
     } catch (error) {
       alert(error.message);
