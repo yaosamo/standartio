@@ -1,57 +1,26 @@
 import styles from "../styles/Home.module.css";
-import IconsData from "../components/icons.json";
-import { useSession, signIn, signOut } from "next-auth/react";
-import IconElement from "../components/iconediting";
-
-function IconsList() {
-  const SortedLatestFirst = IconsData.reverse();
-  return SortedLatestFirst.map((Icon, i) => (
-    <IconElement Icon={Icon} key={i} />
-  ));
-}
-
-function AdminUI() {
-  const { data: session } = useSession();
-  return (
-    <div className={styles.admin}>
-      <div className={styles.menu}>
-        <a>Icons</a>
-        <a className={styles.inactive}>Figma</a>
-        <a className={styles.inactive}>About</a>
-        <button onClick={() => signOut()}>
-          <a className={styles.inactive}>Logout</a>
-        </button>
-      </div>
-      <div className={styles.icons}>
-        <button className={styles.upload}>Upload Beautiful Icons →</button>
-        <IconsList />
-      </div>
-    </div>
-  );
-}
+import { useState, useEffect } from "react";
+import { supabase } from "../utils/supabaseClient";
+import Auth from "../components/auth";
+import Account from "../components/adminUI";
 
 export default function Admin() {
-  const { data: session } = useSession();
+  const [session, setSession] = useState(null);
 
-  if (session) {
-    if (session.user.email === "yaosamo@gmail.com") {
-      return <AdminUI session={session} />;
-    }
-    return (
-      <div className={styles.admin}>
-        <div className={styles.login}>
-          <p>Well, hello! {session.user.name}.</p>
-          <button onClick={() => signOut()}>Sign out</button>
-        </div>
-      </div>
-    );
-  }
+  useEffect(() => {
+    setSession(supabase.auth.session());
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+  }, []);
+
   return (
-    <div className={styles.admin}>
-      <div className={styles.login}>
-        <p>Login for Yaosamo</p> <br />
-        <button onClick={() => signIn("twitter")}>Sign in</button>
-      </div>
+    <div className="container" style={{ padding: "50px 0 100px 0" }}>
+      {!session ? (
+        <Auth />
+      ) : (
+        <Account key={session.user.id} session={session} />
+      )}
     </div>
   );
 }

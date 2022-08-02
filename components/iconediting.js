@@ -1,18 +1,6 @@
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import React, { useState } from "react";
-import fs from "fs";
-
-export async function getStaticProps() {
-  const fileNames = fs.readFile("../components/icons.json", (err, data) => {
-    if (err) throw err;
-    console.log(data);
-  });
-}
-
-function HandleChange(event) {
-  console.log(event);
-}
 
 function EditIcon({ Icon }) {
   return (
@@ -22,7 +10,7 @@ function EditIcon({ Icon }) {
         <input
           type="text"
           name="name"
-          onChange={(e) => HandleChange(e.target.value)}
+          onChange={(e) => getStaticProps()}
           defaultValue={Icon.name}
         />
         <label>Tags</label>
