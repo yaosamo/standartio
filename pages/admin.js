@@ -1,8 +1,7 @@
-import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import { supabase } from "../utils/supabaseClient";
 import Auth from "../components/auth";
-import Account from "../components/adminUI";
+import AdminUI from "../components/adminUI";
 
 export default function Admin() {
   const [session, setSession] = useState(null);
@@ -15,11 +14,11 @@ export default function Admin() {
   }, []);
 
   return (
-    <div className="container" style={{ padding: "50px 0 100px 0" }}>
+    <div>
       {!session ? (
         <Auth />
       ) : (
-        <Account key={session.user.id} session={session} />
+        <AdminUI key={session.user.id} session={session} />
       )}
     </div>
   );
