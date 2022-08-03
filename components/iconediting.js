@@ -1,8 +1,15 @@
 import styles from "../styles/Home.module.css";
-import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
+import { supabase } from "../utils/supabaseClient";
 
-function EditIcon({ Icon }) {
+export default function EditIcon({ Icon }) {
+  const [loading, setLoading] = useState(true);
+
+  const [iconid, setID] = useState(Icon.id);
+  const [iconname, setName] = useState(Icon.name);
+  const [iconurl, setUrl] = useState(Icon.url);
+  const [icontags, setTags] = useState(Icon.tags);
+
   return (
     <>
       <form className={styles.editing}>
@@ -10,48 +17,42 @@ function EditIcon({ Icon }) {
         <input
           type="text"
           name="name"
-          onChange={(e) => getStaticProps()}
-          defaultValue={Icon.name}
+          onChange={(e) => setName(e.target.value)}
+          defaultValue={iconname}
         />
         <label>Tags</label>
-        <input type="text" name="name" defaultValue={Icon.tags} />
+        <input type="text" name="name" defaultValue={icontags} />
         <label>Update File</label>
         <input className={styles.upload} type="file" name="file upload" />
-        <button>Save →</button>
+        <button
+          onClick={() => updateIcon({ iconid, iconname, icontags, iconurl })}
+        >
+          Save →
+        </button>
       </form>
     </>
   );
 }
 
-export default function IconElement({ Icon, i }) {
-  const [editing, setEdit] = useState(false);
+async function updateIcon({ iconid, iconname, icontags, iconurl }) {
+  try {
+    // setLoading(true);
 
-  function IsEditing() {
-    setEdit(!editing);
+    const updates = {
+      id: iconid,
+      name: iconname,
+      tags: icontags,
+      url: iconurl,
+    };
+
+    let { error } = await supabase.from("icons").upsert(updates);
+    // getIcons();
+    if (error) {
+      throw error;
+    }
+  } catch (error) {
+    alert(error.message);
+  } finally {
+    // setLoading(false);
   }
-
-  return (
-    <>
-      <a
-        onClick={() => {
-          IsEditing();
-        }}
-        key={i}
-        download={Icon.name}
-      >
-        <div className={styles.iconshape}>
-          <Image
-            aria-label="Download Icon"
-            className={styles.iconAnimated}
-            src={Icon.url}
-            alt={Icon.name}
-            width={24}
-            height={24}
-          />
-          <p className={styles.label}>{Icon.name}</p>
-        </div>
-      </a>
-      {editing && <EditIcon Icon={Icon} />}
-    </>
-  );
 }

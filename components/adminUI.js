@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import { supabase } from "../utils/supabaseClient";
 import Image from "next/image";
+// import EditIcon from "../components/iconediting"
 
 async function signout() {
   const { error } = await supabase.auth.signOut();
