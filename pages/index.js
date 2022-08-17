@@ -8,7 +8,7 @@ import FigmaWidget from "../components/figmawidget";
 import AboutWidget from "../components/aboutwidget";
 import NewIconsWidget from "../components/newiconswidget";
 import Script from "next/script";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { supabase } from "../utils/supabaseClient";
 
 export async function getStaticProps() {
