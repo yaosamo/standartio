@@ -2,7 +2,6 @@ import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import { supabase } from "../utils/supabaseClient";
 import Image from "next/image";
-// import EditIcon from "../components/iconediting"
 
 async function signout() {
   const { error } = await supabase.auth.signOut();
@@ -12,8 +11,12 @@ export default function AdminUI({ session }) {
   const [loading, setLoading] = useState(true);
   const [icons, setIcons] = useState([]);
 
+  const IconsSorted = []
+    .concat(icons)
+    .sort((a, b) => (a.name > b.name ? 1 : -1));
+
   function IconsList() {
-    return icons.map((Icon, i) => <IconElement Icon={Icon} key={i} />);
+    return IconsSorted.map((Icon, i) => <IconElement Icon={Icon} key={i} />);
   }
 
   function IconElement({ Icon }) {
@@ -41,7 +44,6 @@ export default function AdminUI({ session }) {
               height={24}
             />
             <p className={styles.label}>{Icon.name}</p>
-            <p className={styles.label}>{loading ? "Updating.." : ""}</p>
           </div>
         </a>
         {editing && <EditIcon Icon={Icon} />}
@@ -66,7 +68,12 @@ export default function AdminUI({ session }) {
             defaultValue={iconname}
           />
           <label>Tags</label>
-          <input type="text" name="name" defaultValue={icontags} />
+          <input
+            type="text"
+            name="name"
+            onChange={(e) => setTags(e.target.value)}
+            defaultValue={icontags}
+          />
           <label>Update File</label>
           <input className={styles.upload} type="file" name="file upload" />
           <button
@@ -81,7 +88,7 @@ export default function AdminUI({ session }) {
 
   useEffect(() => {
     getIcons();
-  }, [session]);
+  }, []);
 
   async function getIcons() {
     try {
@@ -136,7 +143,9 @@ export default function AdminUI({ session }) {
         </button>
       </div>
       <div className={styles.icons}>
-        <button className={styles.upload}>Upload Beautiful Icons →</button>
+        <button className={styles.upload}>
+          {loading ? "Updating.." : "Upload Beautiful Icons →"}
+        </button>
         <IconsList />
       </div>
     </div>
