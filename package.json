@@ -1,13 +1,4 @@
 {
-  "name": "standartio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
   "dependencies": {
     "@supabase/supabase-js": "^1.35.4",
     "google-spreadsheet": "^3.3.0",
