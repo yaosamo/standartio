@@ -1,17 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-};
-
-module.exports = nextConfig;
-
-module.exports = {
   images: {
-    domains: ["localhost", "res.cloudinary.com"],
+    domains: ["res.cloudinary.com"],
   },
-};
-
-module.exports = {
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback.fs = false;

@@ -38,7 +38,7 @@ export default function AdminUI({ session }) {
             <Image
               aria-label="Download Icon"
               className={styles.iconAnimated}
-              src="https://res.cloudinary.com/yaosamo/image/upload/v1661310307/standartio/2-chevron-right.svg"
+              src={Icon.url}
               alt={Icon.name}
               width={24}
               height={24}
@@ -150,7 +150,6 @@ export default function AdminUI({ session }) {
           let file = files[i];
           formData.append("file", file);
           formData.append("upload_preset", "standartio");
-          console.log("#" + i + "file", file);
           const dataCloudinary = await fetch(url, {
             method: "POST",
             body: formData,
@@ -161,10 +160,12 @@ export default function AdminUI({ session }) {
               {
                 name: dataCloudinary.original_filename,
                 url: dataCloudinary.secure_url,
+                tags: dataCloudinary.original_filename,
               },
             ]);
         }
       } finally {
+        getIcons();
         setLoading(false);
       }
     }
