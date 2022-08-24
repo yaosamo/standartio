@@ -1,13 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // images: {
-  //   loader: "cloudinary",
-  //   path: `https://res.cloudinary.com/yaosamo`,
-  // },
 };
 
 module.exports = nextConfig;
+
+module.exports = {
+  images: {
+    domains: ["localhost", "res.cloudinary.com"],
+  },
+};
 
 module.exports = {
   webpack: (config, { isServer }) => {

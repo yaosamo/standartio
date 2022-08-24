@@ -38,7 +38,7 @@ export default function AdminUI({ session }) {
             <Image
               aria-label="Download Icon"
               className={styles.iconAnimated}
-              src={Icon.url}
+              src="https://res.cloudinary.com/yaosamo/image/upload/v1661310307/standartio/2-chevron-right.svg"
               alt={Icon.name}
               width={24}
               height={24}
@@ -134,8 +134,7 @@ export default function AdminUI({ session }) {
 
   function UploadIcons() {
     async function uploadNewIcon(event) {
-      const url = "https://api.cloudinary.com/v1_1/demo/image/upload";
-      const url2 = "https://api.cloudinary.com/v1_1/yaosamo/image/upload";
+      const url = "https://api.cloudinary.com/v1_1/yaosamo/image/upload";
 
       try {
         setLoading(true);
@@ -144,34 +143,27 @@ export default function AdminUI({ session }) {
           throw new Error("You must select an image to upload.");
         }
 
-        // take array of files
-        // upload each file to  the storage
-        // insert() new row for each icon in supabase
-
-        const file = event.target.files;
+        const files = event.target.files;
         const formData = new FormData();
-        formData.append("file", file[0]);
-        formData.append("upload_preset", "standartio");
 
-        // const fileExt = file.name.split(".").pop();
-        // const fileName = `${Math.random()}.${fileExt}`;
-        // const filePath = `${fileName}`;
-        console.log("files:", file);
-        const data = await fetch(url2, {
-          method: "POST",
-          body: formData,
-        }).then((r) => r.json());
-        // let { error: uploadError } = await supabase.storage
-        //   .from("avatars")
-        //   .upload(filePath, file);
-
-        //   if (uploadError) {
-        //     throw uploadError;
-        //   }
-
-        //   // onUpload(filePath);
-        // } catch (error) {
-        //   alert(error.message);
+        for (let i = 0; i < files.length; i++) {
+          let file = files[i];
+          formData.append("file", file);
+          formData.append("upload_preset", "standartio");
+          console.log("#" + i + "file", file);
+          const dataCloudinary = await fetch(url, {
+            method: "POST",
+            body: formData,
+          }).then((r) => r.json());
+          const { dataSupabase, errorSupabase } = await supabase
+            .from("icons")
+            .insert([
+              {
+                name: dataCloudinary.original_filename,
+                url: dataCloudinary.secure_url,
+              },
+            ]);
+        }
       } finally {
         setLoading(false);
       }
