@@ -150,6 +150,7 @@ export default function AdminUI({ session }) {
           let file = files[i];
           formData.append("file", file);
           formData.append("upload_preset", "standartio");
+
           const dataCloudinary = await fetch(url, {
             method: "POST",
             body: formData,
