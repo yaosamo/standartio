@@ -9,8 +9,30 @@ import AboutWidget from "../components/aboutwidget";
 import NewIconsWidget from "../components/newiconswidget";
 import Script from "next/script";
 import React, { useState } from "react";
+import { supabase } from "../utils/supabaseClient";
 
-export default function Home() {
+export async function getStaticProps() {
+  try {
+    let { data, error, status } = await supabase.from("icons");
+
+    if (error && status !== 406) {
+      throw error;
+    }
+
+    if (data) {
+      const iconsdata = data;
+      return {
+        props: {
+          iconsdata,
+        },
+      };
+    }
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+export default function Home({ iconsdata }) {
   const [checked, setChecked] = useState(false);
   const handleSizeChange = () => {
     setChecked(!checked);
@@ -19,7 +41,7 @@ export default function Home() {
   const [searchFieldValue, setSearchField] = useState("");
 
   const IconsSorted = []
-    .concat(IconsData)
+    .concat(iconsdata)
     .sort((a, b) => (a.name > b.name ? 1 : -1));
 
   const filteredIcons = IconsSorted.filter((icon) => {

@@ -184,6 +184,7 @@
 .figma model-viewer {
   width: 50%;
   height: 100%;
+  --poster-color: transparent;
 }
 
 .figma .container {
@@ -270,6 +271,121 @@
 
 .requestButton:active {
   transform: scale(0.98);
+}
+
+.admin {
+  display: flex;
+  flex-direction: row;
+}
+
+.admin .menu {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  width: 50%;
+  background: var(--Surface30);
+}
+
+.admin .upload {
+  text-align: left;
+}
+
+.admin .menu a {
+  font-size: 14.2vw;
+  font-weight: 900;
+  line-height: 0.9em;
+  color: var(--text-high-contrast);
+  letter-spacing: -0.04em;
+}
+
+.admin .inactive {
+  opacity: 0.2;
+}
+
+.admin .menu button,
+.admin .icons button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.admin .icons {
+  font-size: 3em;
+  height: 100vh;
+  width: 50%;
+  padding: 1em;
+  overflow-y: scroll;
+}
+
+.admin .icons button {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.8em;
+  text-align: right;
+  padding-block-end: 1em;
+}
+
+.admin .icons .editing button {
+  padding-block-end: 0em;
+}
+
+.admin .login {
+  padding: 3em;
+}
+
+.admin .iconshape {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 1.5em;
+  padding: 0.2em;
+  cursor: pointer;
+}
+
+.admin .iconshape .label {
+  text-align: left;
+}
+
+.admin .editing {
+  background: var(--Surface00);
+  margin: 0.05em 0 0.2em 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  gap: 0.1em;
+  border-radius: 0.1em;
+}
+.editing input {
+  height: 5em;
+  padding: 1em;
+  margin-block-end: 2em;
+  background-color: var(--Surface15);
+  border: none;
+  color: var(--text-medium);
+}
+
+.admin .editing input:active,
+.admin button:active {
+  transform: scale(1.04);
+}
+
+.admin .editing textarea:focus,
+.admin .editing input:focus {
+  outline: none;
+  outline-color: black;
+  border: 0.1em solid var(--Surface10);
+}
+
+.editing label {
+  font-size: 0.75rem;
+}
+
+.admin .editing .upload {
+  background-color: transparent;
+  padding: 0;
+  height: 2em;
 }
 
 /* XXS 320 > 720 */
